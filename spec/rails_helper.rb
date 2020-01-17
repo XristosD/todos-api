@@ -47,7 +47,10 @@ RSpec.configure do |config|
   # add `FactoryBot` methods
   config.include FactoryBot::Syntax::Methods
 
-  config.include RequestSpecHelper, type: :request
+  # config.include RequestSpecHelper, type: :request
+
+  config.include RequestSpecHelper
+  config.include ControllerSpecHelper
 
   config.infer_spec_type_from_file_location!
 
