@@ -3,7 +3,7 @@ class V1::TodosController < ApplicationController
   
     # GET /todos
     def index
-      @todos = current_user.todos.paginate(page: params[:page], per_page: 1)
+      @todos = current_user.todos.paginate(page: params[:page], per_page: 10)
       json_response(@todos)
     end
   
@@ -38,6 +38,7 @@ class V1::TodosController < ApplicationController
     end
   
     def set_todo
-      @todo = Todo.find(params[:id])
+      @todo = Todo.find_by(id: params[:id], created_by: current_user.id)
+      raise ActiveRecord::RecordNotFound if @todo.nil?
     end
   end
