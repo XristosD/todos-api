@@ -1,9 +1,7 @@
-# README
+# ΔΙΑΜΑΝΤΗΣ Χρήστος, p16168
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-wb url: https://xristos-todos-api.herokuapp.com/
+web url: https://xristos-todos-api.herokuapp.com/
 
 API Examples:
 http POST :3001/signup name=xristos email=xristos@email.com password=123456 password_confirmation=123456
